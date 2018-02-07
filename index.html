@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assest/css/map.css">
+	<title>Geolocalización</title>
+</head>
+<body>
+   
+
+<div class="row container botones-cont">
+	<div class="col-md-3">
+		<div class="input-group">
+		  <span class="input-group-addon" id="punto-partida"> </span>
+		  <input type="text" class="form-control" placeholder="Partida" aria-describedby="basic-addon1">
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="input-group">
+		  <span class="input-group-addon" id="punto-destino"> </span>
+		  <input type="text" class="form-control" placeholder="Destino" aria-describedby="basic-addon1">
+		</div>
+	</div>
+	<div class="col-md-2">
+		<button id="trazaRuta" class="btn btn-warning">Traza Ruta</button>
+	</div>
+	<div class="col-md-2">
+		<button id="encuentrame" class="btn btn-warning">Encuentrame</button>
+	</div>
+	
+</div> <!-- boton donde se muestra la funcion-->
+	<div id="map"></div><!--es donde se va a dibujar el mapa-->
+</body>
+   
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQR-IzNqilZZN5cpQI6z2cIIMsx9cM21s&callback=initMap&libraries=places">
+    </script>
+	<script type="text/javascript" src="assest/js/main.js"></script>
+</html>
+
