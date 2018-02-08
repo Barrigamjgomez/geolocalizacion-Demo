@@ -50,24 +50,25 @@ function initMap(){
 	var directionsService = new google.maps.DirectionsService();//obtener coordenadas
 	var directionsDisplay = new google.maps.DirectionsRenderer();//traduce coordenadas de la ruta visible
 
+directionsDisplay.setMap(map);
+	 var trazaRuta = function(){
+	 	   calculateAndDisplayRoute(directionsService,directionsDisplay);
+	 };
 document.getElementById("traza-ruta").addEventListener("click",trazaRuta);
+
 	var calculateAndDisplayRoute = function(directionsService, directionsDisplay){
-		directionsService,route({
+		directionsService.route({
 				origin: inputPartida.value,
 				destination: inputDestino.value,
 				travelMode: "DRIVING"
 			}, function(response, status){
-				if (status === "ok"){
+				if (status === "OK"){
 					directionsDisplay.setDirections(response);
 				}else{
 					window.alert("no encontramos una ruta");
 				};
 		});
 	}
-	directionsDisplay.setMap(map);
-	 var trazaRuta = function(){
-	 	   calculateAndDisplayRoute(directionsService,directionsDisplay);
-	 };
 	 //document.getElementById("traza-ruta").addEventListener("click",trazaRuta);
 }
 
